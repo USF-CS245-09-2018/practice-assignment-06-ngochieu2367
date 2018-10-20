@@ -31,14 +31,14 @@ public class Practice06Test {
 			queue.enqueue(item.substring(i, i+1));
 		}
 
-		while (! stack.empty() && ! queue.empty()) {
-			if (! stack.pop().equals(queue.dequeue())) {
+		while (! stack.empty() &&  !queue.empty()) {
+			if (!stack.pop().equals(queue.dequeue())) {
 				return false;
 			}
 		}
 		
 		// At this point, the stack AND the queue should be empty. But check in case...
-		if (!stack.empty() || ! queue.empty())
+		if (!stack.empty() ||  !queue.empty())
 			return false;
 		
 		return true;
